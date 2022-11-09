@@ -19,6 +19,9 @@ public class Cliente {
 		DataInputStream msgServidor = new DataInputStream(cliente.getInputStream());
 		System.out.println(msgServidor.readUTF());
 		
+		msgCliente.close();
+		msgServidor.close();
+		
 		cliente.close();
 	}
 }
